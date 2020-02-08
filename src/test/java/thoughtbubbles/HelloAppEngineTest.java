@@ -1,3 +1,4 @@
+package thoughtbubbles;
 import java.io.IOException;
 
 import org.junit.Assert;
@@ -8,9 +9,14 @@ public class HelloAppEngineTest {
   @Test
   public void test() throws IOException {
     MockHttpServletResponse response = new MockHttpServletResponse();
-    new HelloAppEngine().doGet(null, response);
+    new HelloAppEngineTest().doGet(null, response);
     Assert.assertEquals("text/plain", response.getContentType());
     Assert.assertEquals("UTF-8", response.getCharacterEncoding());
     Assert.assertEquals("Hello App Engine!\r\n", response.getWriterContent().toString());
   }
+
+private void doGet(Object object, MockHttpServletResponse response) {
+	// TODO Auto-generated method stub
+	
+}
 }
